@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Knowledge Base / Learning Hub</title>
+  <style>
+    /* Import Google Font */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    /* Body Styling */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('https://www.wallpaperflare.com/static/901/957/108/nature-grass-plants-close-wallpaper.jpg') no-repeat center center/cover;
+      backdrop-filter: blur(4px);
+      background-attachment: fixed;
+    }
+
+    header {
+      background-color: rgba(0, 100, 50, 0.75);
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    header h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .section-title {
+      color: #1e6a07;
+      margin-bottom: 20px;
+      font-size: 28px;
+      text-align: center;
+    }
+
+    .card-row {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding-bottom: 15px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .card {
+      flex: 0 0 auto;
+      min-width: 280px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 12px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      scroll-snap-align: start;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h4 {
+      margin: 0;
+      font-size: 18px;
+      color: #1e6a07;
+    }
+
+    .card-content p {
+      font-size: 14px;
+      color: #333;
+      margin-top: 6px;
+    }
+
+    .go-back {
+      display: inline-block;
+      margin-top: 25px;
+      background-color: #1e6a07;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .go-back:hover {
+      background-color: #69fc0d;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌱 Learning Hub</h1>
+    <p>Learn techniques, stay healthy, and farm smart</p>
+  </header>
+
+  <div class="container">
+
+    <h2 class="section-title">Farming Techniques</h2>
+    <div class="card-row">
+      <div class="card">
+        <a href="https://www.youtube.com/watch?v=heTxEsrPVdQ" target="_blank">
+          <img src="https://img.youtube.com/vi/heTxEsrPVdQ/0.jpg" alt="How to Start a Small Farm">
+        </a>
+        <div class="card-content">
+          <h4>Start Your Farming Journey</h4>
+          <p>Step-by-step insights into building a small, successful farm.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="https://www.youtube.com/watch?v=c5pekMjAapo" target="_blank">
+          <img src="https://img.youtube.com/vi/c5pekMjAapo/0.jpg" alt="Multilayer Farming">
+        </a>
+        <div class="card-content">
+          <h4>Profiting from Multilayer Farming</h4>
+          <p>Learn how a farm in Karnataka achieved productivity through multilayer techniques.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="https://www.youtube.com/watch?v=MeG17H_7Ou8" target="_blank">
+          <img src="https://img.youtube.com/vi/MeG17H_7Ou8/0.jpg" alt="China's Farming Technology">
+        </a>
+        <div class="card-content">
+          <h4>Smart Farming Technologies</h4>
+          <p>Explore how cutting-edge technologies are reshaping agriculture in China.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Organic Farming</h2>
+    <div class="card-row">
+      <div class="card">
+        <a href="https://www.youtube.com/watch?v=qkqtcXuogu4" target="_blank">
+          <img src="https://img.youtube.com/vi/qkqtcXuogu4/0.jpg" alt="Organic Farm Tour">
+        </a>
+        <div class="card-content">
+          <h4>Journey Through a Thriving Organic Farm</h4>
+          <p>Take an inspiring tour of a successful organic farm.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="https://www.youtube.com/watch?v=6Ti5g-AZiTs" target="_blank">
+          <img src="https://img.youtube.com/vi/6Ti5g-AZiTs/0.jpg" alt="Composting Techniques">
+        </a>
+        <div class="card-content">
+          <h4>Mastering Composting: A Grower's Guide</h4>
+          <p>Learn effective composting methods to boost soil nutrition.</p>
+        </div>
+      </div>
+      <div class="card">
+        <a href="https://www.youtube.com/watch?v=dZAg8GtRg6E" target="_blank">
+          <img src="https://img.youtube.com/vi/dZAg8GtRg6E/0.jpg" alt="Crop Rotation Benefits">
+        </a>
+        <div class="card-content">
+          <h4>Healthy Soil, Healthy Crops</h4>
+          <p>Understand how crop rotation improves soil health and reduces pests.</p>
+        </div>
+      </div>
+      </div>
+
+    <a href="/" class="go-back">Go Back</a>
+  </div>
+
+</body>
+</html>

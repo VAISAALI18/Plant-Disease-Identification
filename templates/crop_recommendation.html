@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AgroAid: Crop Recommendation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: url('https://www.wallpaperflare.com/static/901/957/108/nature-grass-plants-close-wallpaper.jpg') no-repeat center center/cover;
+      overflow: hidden;
+    }
+
+    .wrapper {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      max-width: 650px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #1e6a07 #d4d4d4;
+    }
+
+    .container::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .container::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .container::-webkit-scrollbar-thumb {
+      background-color: #1e6a07;
+      border-radius: 8px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1e6a07;
+      margin-bottom: 10px;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #222;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #2e2e2e;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    .full-width {
+      grid-column: span 2;
+    }
+
+    button {
+      padding: 12px;
+      width: 100%;
+      background-color: #1e6a07;
+      color: white;
+      border: none;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #69fc0d;
+      color: black;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 20px;
+      color: #1e6a07;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #444;
+    }
+
+    hr {
+      margin-top: 30px;
+    }
+    /* Go Back Button */
+    .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #1e6a07;
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #69fc0d;
+            transform: scale(1.05);
+        }
+
+    @media (max-width: 600px) {
+      form {
+        grid-template-columns: 1fr;
+      }
+
+      .full-width {
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <h1>🌾 AgroAid: Crop Recommendation DSS</h1>
+      <p>Provide soil and environmental details to get the best crop recommendation for your field.</p>
+
+      <form method="POST">
+        <div class="form-group">
+          <label for="nitrogen">Nitrogen (N):</label>
+          <input type="number" name="nitrogen" min="0" max="140" value="50" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phosphorus">Phosphorus (P):</label>
+          <input type="number" name="phosphorus" min="0" max="140" value="50" required>
+        </div>
+
+        <div class="form-group">
+          <label for="potassium">Potassium (K):</label>
+          <input type="number" name="potassium" min="0" max="200" value="50" required>
+        </div>
+
+        <div class="form-group">
+          <label for="temperature">Temperature (°C):</label>
+          <input type="number" name="temperature" step="0.1" min="0" max="50" value="25.0" required>
+        </div>
+
+        <div class="form-group">
+          <label for="humidity">Humidity (%):</label>
+          <input type="number" name="humidity" step="0.1" min="0" max="100" value="70.0" required>
+        </div>
+
+        <div class="form-group">
+          <label for="ph">pH Level:</label>
+          <input type="number" name="ph" step="0.1" min="0" max="14" value="6.5" required>
+        </div>
+
+        <div class="form-group">
+          <label for="rainfall">Rainfall (mm):</label>
+          <input type="number" name="rainfall" step="0.1" min="0" max="300" value="100.0" required>
+        </div>
+
+        <div class="form-group full-width">
+          <button type="submit">Predict Suitable Crop</button>
+        </div>
+      </form>
+
+      {% if crop %}
+        <h2>✅ Recommended Crop: {{ crop }}</h2>
+      {% endif %}
+
+      <a href="/" class="back-button">Go Back</a>
+    </div>
+  </div>
+</body>
+</html>

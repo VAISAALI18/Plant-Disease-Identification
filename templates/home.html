@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agronova - Home</title>
+  <style>
+    /* Import Google Font */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    /* Body Styling */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('https://www.wallpaperflare.com/static/901/957/108/nature-grass-plants-close-wallpaper.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Header Styling */
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      color: #ffffff;
+      font-size: 42px;
+      font-weight: 700;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Options Container */
+    .options-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 20px;
+    }
+
+    /* Option Card Styling */
+    .option-card {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      width: 160px;
+    }
+
+    .option-card:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .option-card img {
+      display: block;
+      margin: 0 auto;
+      width: 70px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .option-card a {
+      text-decoration: none;
+      color: #1e6a07;
+      font-size: 18px;
+      font-weight: 600;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <div class="header">
+    <h1>AGRONOVA</h1>
+  </div>
+
+  <!-- Options Section -->
+  <div class="options-container">
+    <!-- Cure Disease -->
+    <div class="option-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2917/2917995.png" alt="Cure Disease">
+      <a href="/predict">Cure Disease</a>
+    </div>
+
+    
+
+    <!-- Agri Tips -->
+    <div class="option-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2910/2910791.png" alt="Agri Tips">
+      <a href="/learning">Agri Tips</a>
+    </div>
+
+   
+
+    <div class="option-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1000/1000900.png" alt="Crop Recommendation">
+      <a href="/crop_recommendation">Crop Recommendation</a>
+    </div>
+    
+    <!-- Fertilizer Recommendation -->
+    <div class="option-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2911/2911121.png" alt="Fertilizer Recommendation">
+      <a href="/fertilizer_recommendation">Fertilizer Recommendation</a>
+    </div>
+
+  </div>
+</body>
+</html>
